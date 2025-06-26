@@ -122,8 +122,8 @@
   --color-acc-800: var(--accent-800);
   --color-acc-900: var(--accent-900);
   --color-acc-950: var(--accent-950);
-  --font-sans: var(--font-montserrat);
-  --font-mono: var(--font-montserrat-alt);
+  --font-m: var(--font-montserrat);
+  --font-ma: var(--font-montserrat-alt);
 }
 
 @media (prefers-color-scheme: dark) {

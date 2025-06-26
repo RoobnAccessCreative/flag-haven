@@ -1,3 +1,11 @@
+import {
+  ClerkProvider,
+  SignInButton,
+  SignUpButton,
+  SignedIn,
+  SignedOut,
+  UserButton,
+} from "@clerk/nextjs";
 import { Montserrat, Montserrat_Alternates } from "next/font/google";
 import "./globals.css";
 
@@ -20,12 +28,28 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body
-        className={`${montserrat.variable} ${montserrat_alternates.variable} antialiased bg-bg-50 text-txt-900`}
-      >
-        {children}
-      </body>
-    </html>
+    <ClerkProvider>
+      <html lang="en">
+        <body
+          className={`${montserrat.variable} ${montserrat_alternates.variable} antialiased bg-bg-50 text-txt-900`}
+        >
+          <header className="font-ma">
+            <nav></nav>
+            <div>
+              <SignedIn>
+                <UserButton />
+              </SignedIn>
+              <SignedOut>
+                <SignInButton>
+                  <h1>Log in</h1>
+                </SignInButton>
+                <SignUpButton />
+              </SignedOut>
+            </div>
+          </header>
+          {children}
+        </body>
+      </html>
+    </ClerkProvider>
   );
 }
