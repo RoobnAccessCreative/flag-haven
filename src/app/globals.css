@@ -4,6 +4,9 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
+  width: 100dvw;
+  height: 100dvh;
+
   --text-50: #ebe9fc;
   --text-100: #d7d3f8;
   --text-200: #afa6f2;

@@ -1,4 +1,5 @@
 import { db } from "@/utils/db";
+import Header from "%/Header";
 
 export default async function HomePage() {
   const data = await db.query(
@@ -10,8 +11,8 @@ export default async function HomePage() {
   console.log(data);
 
   return (
-    <main>
-      <h1>bwaa</h1>
-    </main>
+    <>
+      <Header />
+    </>
   );
 }
