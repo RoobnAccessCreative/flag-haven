@@ -9,8 +9,6 @@ export default async function HomePage() {
     ORDER BY fh_posts.date DESC"
   ).rows;
 
-  throw new Error("these aren't the functions you're looking for");
-
   return (
     <>
       <Header />
