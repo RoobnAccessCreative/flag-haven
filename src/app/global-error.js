@@ -40,7 +40,7 @@ export default function GlobalError({ error, reset }) {
       >
         <div className="flex items-center gap-8">
           <Image
-            src={"error.svg"}
+            src={"/error.svg"}
             alt="red flag"
             width={100}
             height={100}
@@ -50,7 +50,7 @@ export default function GlobalError({ error, reset }) {
             Error — Something Went Wrong
           </h1>
           <Image
-            src={"error.svg"}
+            src={"/error.svg"}
             alt="red flag"
             width={100}
             height={100}

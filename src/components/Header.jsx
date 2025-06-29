@@ -10,10 +10,10 @@ import Link from "next/link";
 import cardStyles from "%/styles/card.module.css";
 import { auth } from "@clerk/nextjs/server";
 import { db } from "@/utils/db";
+import UserIcon from "%/UserIcon";
 
 export default async function Header() {
   const { userId } = await auth();
-  console.log(userId);
 
   let data;
   try {
@@ -65,7 +65,7 @@ export default async function Header() {
       >
         <SignedIn>
           <div className="cursor-pointer">
-            <UserButton />
+            <UserIcon username={data?.username} />
           </div>
         </SignedIn>
 
