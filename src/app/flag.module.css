@@ -1,0 +1,13 @@
+.right {
+  rotate: 10deg;
+  filter: drop-shadow(0px 0px 12px #da255e);
+}
+
+.left {
+  rotate: -10deg;
+  filter: drop-shadow(0px 0px 12px #da255e);
+}
+
+.shadow {
+  box-shadow: 0px 0px 32px #da255e91, inset 0px 0px 16px #da255e91;
+}
