@@ -2,7 +2,6 @@ import { ClerkProvider } from "@clerk/nextjs";
 import { dark } from "@clerk/themes";
 import { Montserrat, Montserrat_Alternates } from "next/font/google";
 import "./globals.css";
-import Header from "£/Header";
 
 const montserrat = Montserrat({
   variable: "--font-montserrat",
@@ -36,13 +35,11 @@ export default function RootLayout({ children }) {
     >
       <html lang="en">
         <body
-          className={`${montserrat.variable} ${montserrat_alternates.variable} antialiased bg-bg-50 text-txt-950`}
+          className={`${montserrat.variable} ${montserrat_alternates.variable} \
+          antialiased bg-bg-100 text-txt-950 flex flex-col items-center justify-between \
+          w-full h-full gap-4`}
         >
-          <Header />
-          <div className="mt-6"></div>
-          <main className="flex flex-col items-center justify-between w-full h-full">
-            {children}
-          </main>
+          {children}
         </body>
       </html>
     </ClerkProvider>
