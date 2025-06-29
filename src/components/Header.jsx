@@ -8,8 +8,27 @@ import {
 } from "@clerk/nextjs";
 import Link from "next/link";
 import cardStyles from "%/styles/card.module.css";
+import { auth } from "@clerk/nextjs/server";
+import { db } from "@/utils/db";
+import UserIcon from "%/UserIcon";
 
-export default function Header() {
+export default async function Header() {
+  const { userId } = await auth();
+
+  let data;
+  try {
+    const res = await db.query(
+      "SELECT username FROM fh_users WHERE clerk_id = $1",
+      [userId]
+    );
+    data = res.rows[0];
+  } catch (err) {
+    data = "";
+    if (err) {
+      throw new Error(`${err}`);
+    }
+  }
+
   return (
     <header className="font-ma text-txt-950 font-medium flex items-center justify-between sticky top-4 w-[calc(100dvw-2rem)]">
       {/* 
@@ -46,7 +65,7 @@ export default function Header() {
       >
         <SignedIn>
           <div className="cursor-pointer">
-            <UserButton />
+            <UserIcon username={data?.username} />
           </div>
         </SignedIn>
 
