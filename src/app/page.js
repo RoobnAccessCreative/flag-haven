@@ -8,7 +8,8 @@ export default async function HomePage() {
     JOIN fh_users ON fh_posts.poster = fh_users.clerk_id \
     ORDER BY fh_posts.date DESC"
   ).rows;
-  console.log(data);
+
+  throw new Error("these aren't the functions you're looking for");
 
   return (
     <>
