@@ -10,9 +10,10 @@ import {
 } from "$/card";
 import { Input } from "$/input";
 import cardStyles from "./styles/card.module.css";
-import { submit } from "@/utils/submit";
+import { addUser } from "@/utils/addUser";
 
-export default function Username({ email }) {
+export default function Username({ email, user }) {
+  console.log(email, user);
   return (
     <Card
       className={`w-full max-w-2xl bg-pri-700 text-[#ebe9fc] font-m border-pri-800 outline-0 z-20 ${cardStyles.shadow}`}
@@ -24,7 +25,16 @@ export default function Username({ email }) {
         </CardDescription>
       </CardHeader>
       <CardContent>
-        <form action={submit}>
+        <form action={addUser} id="newuser">
+          <input
+            type="text"
+            name="id"
+            id="id"
+            value={user}
+            readOnly
+            hidden
+            aria-hidden
+          />
           <input
             type="email"
             name="email"
@@ -46,7 +56,11 @@ export default function Username({ email }) {
         </form>
       </CardContent>
       <CardFooter>
-        <Button type="submit" className={"w-full bg-acc-500 hover:bg-acc-400"}>
+        <Button
+          type="submit"
+          form="newuser"
+          className={"w-full bg-acc-500 hover:bg-acc-400"}
+        >
           Create Account
         </Button>
       </CardFooter>

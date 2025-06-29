@@ -13,6 +13,7 @@ export default async function HomePage() {
   return (
     <>
       <Header />
+      <main className="h-full flex flex-col justify-center items-center"></main>
     </>
   );
 }

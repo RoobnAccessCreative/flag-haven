@@ -7,6 +7,7 @@ import {
   UserButton,
 } from "@clerk/nextjs";
 import Link from "next/link";
+import cardStyles from "%/styles/card.module.css";
 
 export default function Header() {
   return (
@@ -19,7 +20,7 @@ export default function Header() {
         —> new post is a button to create a new post
       */}
       <nav
-        className={`flex items-center gap-4 bg-pri-700 rounded-lg pt-2 pr-4 pb-2 pl-4 w-fit shadow-2xl h-14`}
+        className={`flex items-center gap-4 bg-pri-700 rounded-lg pt-2 pr-4 pb-2 pl-4 w-fit shadow-2xl h-14 ${cardStyles.shadow}`}
       >
         <Link href={"/"}>
           <Image src={"/logo.svg"} alt="FlagHaven" width={100} height={50} />
@@ -39,7 +40,7 @@ export default function Header() {
       —> user auth, profile
       */}
       <div
-        className={`flex items-center gap-4 bg-pri-700 rounded-lg pt-2 pr-4 pb-2 pl-4 w-fit shadow-2xl h-14`}
+        className={`flex items-center justify-baseline  gap-4 bg-pri-700 rounded-lg pt-2 pr-4 pb-2 pl-4 w-fit shadow-2xl h-14 ${cardStyles.shadow}`}
       >
         <SignedIn>
           <div className="cursor-pointer">
