@@ -13,7 +13,6 @@ import cardStyles from "./styles/card.module.css";
 import { addUser } from "@/utils/addUser";
 
 export default function Username({ email, user }) {
-  console.log(email, user);
   return (
     <Card
       className={`w-full max-w-2xl bg-pri-700 text-[#ebe9fc] font-m border-pri-800 outline-0 z-20 ${cardStyles.shadow}`}

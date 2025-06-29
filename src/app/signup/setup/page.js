@@ -8,7 +8,7 @@ export default function SetupAccountPage() {
 
   return (
     <main className="w-full h-full flex items-center justify-center">
-      <Username email={user?.emailAddresses[0]} user={user.id} />
+      <Username email={user?.emailAddresses[0]} user={user?.id} />
     </main>
   );
 }
