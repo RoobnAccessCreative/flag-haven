@@ -35,6 +35,8 @@ CREATE TABLE IF NOT EXISTS fh_posts (
 ## What Went Worse
 
 - i went over teh deadline again — I need to focus more and not push things back in the future
+- i failed to make a route to creat posts, and rushed the `Post.jsx` component at the end.
+  - this, of course, means i also didn&apos;t achieve any strtch goals either
 - i hade several problematic errors due to small syntactical and logical mistakes that led me to get slightly tilted near the end of the project
   - Next&apos;s `Image` component doesn't seem to be very compatible with clerk&apos;s `user.imageurl` property, causing me to have to use a regular `<img>` tag in `ProfilePic.jsx`
 
