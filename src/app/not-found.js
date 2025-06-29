@@ -20,7 +20,7 @@ export default function NotFoundPage() {
             alt="flag with a question mark"
             className="invert"
           />
-          <h1 className="text-3xl font-bold">Oops!</h1>
+          <h1 className="text-3xl font-bold font-ma">Oops!</h1>
           <CardDescription className={"text-[#a3a3c2]"}>
             We couldn&apos;t quite find what you&apos;re looking for. Make sure
             you typed in everything correctly.

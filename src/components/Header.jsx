@@ -29,7 +29,9 @@ export default function Header() {
           <input
             type="text"
             className="w-72 bg-pri-600 rounded-md font-m p-1 pl-2 text-txt-950 focus:outline-none focus:ring-2 focus:ring-pri-500"
-            placeholder="Search"
+            placeholder="Search Coming Soon!"
+            disabled
+            aria-disabled
           />
         </form>
         {/* add search and hide */}
